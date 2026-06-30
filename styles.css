@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  margin: 0;
+}
+
+#game {
+  width: 100%;
+  max-width: 480px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#game-title {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+#score-display {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+#question-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 30px 25px;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+#question-number {
+  color: #607d8b;
+  font-size: 0.9rem;
+  margin: 0 0 10px;
+}
+
+#question-text {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0 0 25px;
+}
+
+#answer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#answer-list li {
+  margin-bottom: 12px;
+}
+
+.answer-btn {
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+  border: 2px solid #cfd8dc;
+  border-radius: 8px;
+  background-color: #fafafa;
+  cursor: pointer;
+  text-align: left;
+  transition:
+    background-color 0.15s,
+    border-color 0.15s;
+}
+
+.answer-btn:hover {
+  background-color: #eceff1;
+  border-color: #90a4ae;
+}
+
+.answer-btn:focus {
+  outline: 3px solid #2196f3;
+  outline-offset: 2px;
+}
+
+#next-btn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#next-btn:hover {
+  background-color: #1976d2;
+}
+
+#end-screen {
+  background-color: #263238;
+  color: white;
+  border-radius: 10px;
+  padding: 40px 25px;
+  text-align: center;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+#end-screen h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+#end-screen p {
+  margin-bottom: 25px;
+}
+
+#end-screen button {
+  padding: 14px 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Applied to the button the player clicked — correct answer */
+.correct {
+  background-color: #4caf50;
+  color: white;
+  border-color: #388e3c;
+}
+
+/* Applied to the button the player clicked — wrong answer */
+.wrong {
+  background-color: #e53935;
+  color: white;
+  border-color: #c62828;
+}
+
+/* Applied to all answer buttons after a choice is made */
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: default;
+}
+
+/* Applied to #question-card after an answer is locked in */
+.answered {
+  border-left: 4px solid #90a4ae;
+}
+
+/* Hides an element — used on next-btn and end-screen initially */
+.hidden {
+  display: none;
+}
